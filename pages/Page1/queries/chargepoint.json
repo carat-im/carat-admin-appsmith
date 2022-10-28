@@ -2,13 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "cancelPurchaseFilter",
+    "name": "chargepoint",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "http://store-server.carat.im"
+        "url": "https://store-server.carat.im:443"
       },
       "invalids": [],
       "messages": [],
@@ -21,21 +20,25 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/user/point/cancel/purchase/filter",
+      "path": "/admin/charge/point",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "filterType",
-          "value": "{{cancelPurchaseFilterType.selectedOptionValue}}"
-        },
-        {
-          "key": "filterId",
-          "value": "{{cancelPurchaseFilterId.text}}"
-        },
-        {
           "key": "userId",
-          "value": "{{cancelPurchasedUserId.text}}"
+          "value": "{{userIdInput.text}}"
+        },
+        {
+          "key": "points",
+          "value": "{{pointInput.text}}"
+        },
+        {
+          "key": "extraPoints",
+          "value": "{{bonusPointInput.text}}"
+        },
+        {
+          "key": "productId",
+          "value": "{{productIdInput.text}}"
         }
       ],
       "bodyFormData": [],
@@ -63,22 +66,26 @@
       },
       {
         "key": "queryParameters[2].value"
+      },
+      {
+        "key": "queryParameters[3].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "cancelPurchaseFilterId.text",
-      "cancelPurchaseFilterType.selectedOptionValue",
-      "cancelPurchasedUserId.text"
+      "bonusPointInput.text",
+      "pointInput.text",
+      "productIdInput.text",
+      "userIdInput.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_cancelPurchaseFilter",
+  "id": "Page1_chargepoint",
   "deleted": false,
-  "gitSyncId": "63452ba605671e46ee8fca0c_634534ba61a6260030f06d82"
+  "gitSyncId": "63452ba605671e46ee8fca0c_635b80e68e104a35881ff4ff"
 }
