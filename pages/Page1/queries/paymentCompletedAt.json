@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://bb9b-211-178-179-242.jp.ngrok.io"
+        "url": "https://store-server.carat.im:443"
       },
       "invalids": [],
       "messages": [],
