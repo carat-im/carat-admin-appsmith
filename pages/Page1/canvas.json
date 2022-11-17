@@ -529,7 +529,7 @@
                         }
                       ],
                       "labelPosition": "Left",
-                      "options": "[\n  {\n    \"label\": \"색감렌즈\",\n    \"value\": \"colorFilter\"\n  },\n  {\n    \"label\": \"스티커\",\n    \"value\": \"sticker\"\n  }\n]",
+                      "options": "[\n  {\n    \"label\": \"색감렌즈\",\n    \"value\": \"colorFilter\"\n  },\n  {\n    \"label\": \"스티커\",\n    \"value\": \"sticker\"\n  },\n\t{\n\t\"label\": \"통합필터\",\n\t\"value\": \"caratFilter\"\n\t}\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "3kv07at558",
@@ -590,7 +590,7 @@
                       "widgetId": "9gp594lmxv",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
-                      "label": "색감렌즈/스티커 id",
+                      "label": "필터 id",
                       "version": 2,
                       "parentId": "ds8fp26m3o",
                       "labelAlignment": "left",
